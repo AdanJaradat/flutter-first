@@ -2,6 +2,15 @@
 
 A new Flutter project.
 
+# dart intro2024
+
+first class in dart
+
+| Class number | Title        | Link                             |
+| ------------ | ------------ | -------------------------------- |
+| 1            | Introduction | [ClickHere](./classes/class1.md) |
+| 2            | Widget       | [ClickHere](./classes/class2.md) |
+
 ## Getting Started
 
 This project is a starting point for a Flutter application.
