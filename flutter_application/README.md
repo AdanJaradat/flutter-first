@@ -10,6 +10,8 @@ first class in dart
 | ------------ | ------------ | -------------------------------- |
 | 1            | Introduction | [ClickHere](./classes/class1.md) |
 | 2            | Widget       | [ClickHere](./classes/class2.md) |
+| 3            | Widget       | [ClickHere](./classes/class3.md) |
+| 4            | Widget       | [ClickHere](./classes/class4.md) |
 
 ## Getting Started
 
