@@ -23,7 +23,7 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
-  late String search;
+  static String search = 'your result will appear here.';
   // String title = '';
   // String img = '';
   Map products = {
@@ -83,7 +83,7 @@ class _HomeState extends State<Home> {
           ),
           TextField(
             onChanged: (value) {
-              search = 'your result will appear here.';
+              //search = 'your result will appear here.';
               List productsKey = products.keys.toList();
               List result = [];
               for (var i = 0; i < productsKey.length; i++) {
@@ -117,7 +117,7 @@ class _HomeState extends State<Home> {
           ),
 
           foundedResult.isEmpty
-              ? Text(search)
+              ? const Text('not found')
               : Container(
                   height: 400,
                   width: 300,
