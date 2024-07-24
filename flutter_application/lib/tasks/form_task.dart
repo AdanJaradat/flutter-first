@@ -32,6 +32,7 @@ class _RegisterState extends State<Register> {
       passwword = '',
       phone = '',
       birth = '';
+  bool isEnable = false, isAgree = false;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -66,9 +67,7 @@ class _RegisterState extends State<Register> {
                           borderRadius: BorderRadius.circular(15),
                           borderSide: BorderSide(color: Colors.grey))),
                 ),
-                const SizedBox(
-                  height: 20,
-                ),
+                const SizedBox(height: 20),
                 TextFormField(
                   keyboardType: TextInputType.text,
                   validator: (value) {
@@ -89,9 +88,7 @@ class _RegisterState extends State<Register> {
                           borderRadius: BorderRadius.circular(15),
                           borderSide: BorderSide(color: Colors.grey))),
                 ),
-                const SizedBox(
-                  height: 20,
-                ),
+                const SizedBox(height: 20),
                 TextFormField(
                   validator: (value) {
                     if (value!.isEmpty) {
@@ -112,9 +109,7 @@ class _RegisterState extends State<Register> {
                           borderRadius: BorderRadius.circular(15),
                           borderSide: BorderSide(color: Colors.grey))),
                 ),
-                const SizedBox(
-                  height: 20,
-                ),
+                const SizedBox(height: 20),
                 TextFormField(
                   validator: (value) {
                     if (value!.isEmpty) {
@@ -135,9 +130,7 @@ class _RegisterState extends State<Register> {
                           borderRadius: BorderRadius.circular(15),
                           borderSide: BorderSide(color: Colors.grey))),
                 ),
-                const SizedBox(
-                  height: 20,
-                ),
+                const SizedBox(height: 20),
                 TextFormField(
                   validator: (value) {
                     if (value!.isEmpty) {
@@ -158,9 +151,7 @@ class _RegisterState extends State<Register> {
                           borderRadius: BorderRadius.circular(15),
                           borderSide: BorderSide(color: Colors.grey))),
                 ),
-                const SizedBox(
-                  height: 20,
-                ),
+                const SizedBox(height: 20),
                 TextFormField(
                   validator: (value) {
                     if (value!.isEmpty) {
@@ -181,15 +172,9 @@ class _RegisterState extends State<Register> {
                           borderRadius: BorderRadius.circular(15),
                           borderSide: BorderSide(color: Colors.grey))),
                 ),
-                const SizedBox(
-                  height: 20,
-                ),
-                const Divider(
-                  thickness: 1,
-                ),
-                const SizedBox(
-                  height: 20,
-                ),
+                const SizedBox(height: 20),
+                const Divider(thickness: 1),
+                const SizedBox(height: 20),
                 const Text(
                   'Country : ',
                   style: TextStyle(fontSize: 19),
@@ -212,15 +197,9 @@ class _RegisterState extends State<Register> {
                         _country = value!;
                       });
                     }),
-                const SizedBox(
-                  height: 20,
-                ),
-                const Divider(
-                  thickness: 1,
-                ),
-                const SizedBox(
-                  height: 20,
-                ),
+                const SizedBox(height: 20),
+                const Divider(thickness: 1),
+                const SizedBox(height: 20),
                 const Text(
                   'Gender :',
                   style: TextStyle(fontSize: 19),
@@ -243,9 +222,31 @@ class _RegisterState extends State<Register> {
                         _gender = value!;
                       });
                     }),
-                const SizedBox(
-                  height: 20,
-                ),
+                const SizedBox(height: 20),
+                const Divider(thickness: 1),
+                const SizedBox(height: 20),
+                SwitchListTile(
+                    activeColor: Colors.blue,
+                    title: Text('Enable access to this app.'),
+                    value: isEnable,
+                    onChanged: (value) {
+                      setState(() {
+                        isEnable = value;
+                      });
+                    }),
+                const SizedBox(height: 20),
+                const Divider(thickness: 1),
+                const SizedBox(height: 20),
+                CheckboxListTile(
+                    title: Text('Agree'),
+                    activeColor: Colors.blue,
+                    value: isAgree,
+                    onChanged: (value) {
+                      setState(() {
+                        isAgree = value!;
+                      });
+                    }),
+                const SizedBox(height: 20),
                 Container(
                   margin: const EdgeInsets.symmetric(horizontal: 70),
                   child: ElevatedButton(
